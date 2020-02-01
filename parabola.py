@@ -9,8 +9,8 @@ def parabola(page, size):
         plot(page, -x, y)
 
 
-def circle(page, radius, g, h):
-    page.create_oval(g + radius, h + radius, g - radius, h - radius, outline="red", width=2)
+def circle(page, radius, g, h, colour="red"):
+    page.create_oval(g + radius, h + radius, g - radius, h - radius, outline=colour, width=2)
     # for x in range(g * 50, (g + radius) * 50):
     #     x /= 50
     #     print(x)
@@ -52,10 +52,10 @@ draw_axes(canvas)
 parabola(canvas, 100)
 parabola(canvas, 200)
 
-circle(canvas, 100, 100, 100)
-circle(canvas, 100, 100, -100)
-circle(canvas, 100, -100, 100)
-circle(canvas, 100, -100, -100)
+circle(canvas, 100, 100, 100, "green")
+circle(canvas, 100, 100, -100, "blue")
+circle(canvas, 100, -100, 100, "pink")
+circle(canvas, 100, -100, -100, "yellow")
 
 circle(canvas, 10, 30, 30)
 circle(canvas, 10, 30, -30)
